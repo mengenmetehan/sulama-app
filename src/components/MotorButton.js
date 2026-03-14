@@ -33,7 +33,7 @@ export default function MotorButton({ isOn, isLoading, isOnline, onPress }) {
             !isOnline && styles.buttonDisabled,
           ]}
           onPress={onPress}
-          disabled={isLoading || !isOnline}
+          disabled={isLoading}
           activeOpacity={0.7}
         >
           {isLoading ? (

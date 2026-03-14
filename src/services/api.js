@@ -9,7 +9,7 @@
 // ⚠️ BU IP'Yİ KENDİ PC'NİN IP'Sİ İLE DEĞİŞTİR
 // PowerShell'de "ipconfig" yaz, "IPv4 Address" kısmına bak
 // Örnek: 192.168.1.42
-const API_BASE = 'http://192.168.1.100:8080/api/irrigation';
+const API_BASE = 'https://sulama-backend-production.up.railway.app/api/irrigation';
 
 // Timeout süresi (ms)
 const TIMEOUT = 10000;

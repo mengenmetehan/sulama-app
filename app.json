@@ -15,7 +15,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.metehanmengen.sulamaapp",
-      "googleServicesFile": "./GoogleService-Info.plist",
+      "googleServicesFile": "$GOOGLE_SERVICE_INFO_PLIST",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
@@ -26,12 +26,13 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "googleServicesFile": "./google-services.json",
+      "googleServicesFile": "$GOOGLE_SERVICES_JSON",
       "package": "com.metehanmengen.sulamaapp"
     },
     "plugins": [
       "@react-native-firebase/app",
-      "@react-native-firebase/messaging"
+      "@react-native-firebase/messaging",
+      "./plugins/with-firebase-ios"
     ],
     "web": {
       "favicon": "./assets/favicon.png"

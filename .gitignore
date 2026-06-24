@@ -40,6 +40,3 @@ yarn-error.*
 /ios
 /android
 
-# Firebase config (use EAS secrets for builds)
-google-services.json
-GoogleService-Info.plist

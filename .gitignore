@@ -40,3 +40,7 @@ yarn-error.*
 /ios
 /android
 
+# Firebase config (use EAS secrets for builds — never commit, contains API keys)
+google-services.json
+GoogleService-Info.plist
+

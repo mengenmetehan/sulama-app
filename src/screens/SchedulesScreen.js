@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
   View, Text, ScrollView, TouchableOpacity, Switch,
   Alert, Modal, TextInput, StyleSheet, RefreshControl,
+  KeyboardAvoidingView, Platform,
 } from 'react-native';
 import { colors } from '../constants/colors';
 import api from '../services/api';
@@ -186,6 +187,10 @@ export default function SchedulesScreen() {
 
       {/* ============ MODAL ============ */}
       <Modal visible={modalVisible} animationType="slide" transparent>
+        <KeyboardAvoidingView
+          style={{ flex: 1 }}
+          behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        >
         <View style={styles.modalOverlay}>
           <View style={styles.modalContent}>
             <Text style={styles.modalTitle}>
@@ -260,6 +265,7 @@ export default function SchedulesScreen() {
             </View>
           </View>
         </View>
+        </KeyboardAvoidingView>
       </Modal>
 
       <View style={{ height: 30 }} />

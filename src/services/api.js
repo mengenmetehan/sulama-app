@@ -58,10 +58,10 @@ async function request(url, options = {}) {
       throw new Error(`API Hatası ${res.status}: ${errorBody}`);
     }
 
-    // 204 No Content için boş dön
     if (res.status === 204) return null;
 
-    return res.json();
+    const text = await res.text();
+    return text ? JSON.parse(text) : null;
   } catch (error) {
     clearTimeout(timeoutId);
 
@@ -106,6 +106,13 @@ const api = {
 
   // Loglar
   getLogs: (days = 7) => request(`${API_BASE}/logs?days=${days}`),
+
+  // FCM token
+  registerFcmToken: (fcmToken) => request(`${BASE_URL}/api/users/fcm-token`, {
+    method: 'PUT',
+    body: JSON.stringify({ token: fcmToken }),
+  }),
+  deleteFcmToken: () => request(`${BASE_URL}/api/users/fcm-token`, { method: 'DELETE' }),
 };
 
 export default api;

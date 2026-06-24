@@ -119,7 +119,7 @@ export default function DashboardScreen() {
       <View style={styles.row}>
         <StatCard
           icon="💧"
-          label="Toprak Nemi"
+          label="Hava Nemi"
           value={`%${status?.soilMoisture ?? '--'}`}
           color={getMoistureColor(status?.soilMoisture)}
           subtitle={getMoistureLabel(status?.soilMoisture)}
@@ -134,13 +134,6 @@ export default function DashboardScreen() {
       </View>
 
       <View style={styles.row}>
-        <StatCard
-          icon="🚿"
-          label="Bugün Kullanılan"
-          value={`${dashboard?.todayWaterUsedLiters ?? 0} L`}
-          color={colors.primary}
-        />
-        <View style={{ width: 12 }} />
         <StatCard
           icon="⏱️"
           label="Motor Çalışma"

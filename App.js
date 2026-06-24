@@ -94,20 +94,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#1A2733',
     borderTopColor: '#2A3A4A',
     borderTopWidth: 1,
-    paddingTop: 6,
-    paddingBottom: 8,
-    height: 60,
+    paddingTop: 10,
+    paddingBottom: 14,
+    height: 84,
   },
   tabLabel: {
-    fontSize: 10,
+    fontSize: 13,
     fontWeight: '500',
-    marginTop: 2,
+    marginTop: 3,
   },
   tabIcon: {
-    fontSize: 20,
+    fontSize: 27,
   },
   tabIconActive: {
-    fontSize: 22,
+    fontSize: 29,
   },
   logoutBtn: {
     marginRight: 16,
